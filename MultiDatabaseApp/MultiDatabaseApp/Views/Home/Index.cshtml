@@ -1,0 +1,21 @@
+﻿@model MultiDatabaseApp.Models.ResultViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>従業員</h1>
+@foreach (var item in Model.Employees)
+{
+    <p>@item.Name</p>
+}
+
+<h1>生徒</h1>
+@foreach (var item in Model.Students)
+{
+    <p>@item.FirstName</p>
+}
